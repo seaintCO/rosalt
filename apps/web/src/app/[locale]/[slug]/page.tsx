@@ -10,7 +10,7 @@ import { HostSandbox } from "@/components/host-sandbox";
 import { integrationStatus } from "@/lib/env";
 import { AboutPage, DemoPage, MaisonAiPage, PackagesPage, ServicesPage, StartProjectPage } from "@/components/maison-content";
 
-const publicSlugs = [
+const experienceSlugs = [
   "for-travelers",
   "for-hosts",
   "for-property-managers",
@@ -23,14 +23,10 @@ const publicSlugs = [
   "terms",
   "accessibility",
   "vendor-application",
-  "services",
-  "maison-ai",
-  "packages",
-  "start-project",
-  "demo",
 ] as const;
 
-type PublicSlug = (typeof publicSlugs)[number];
+const publicSlugs = [...experienceSlugs, "services", "maison-ai", "packages", "start-project", "demo"] as const;
+type ExperienceSlug = (typeof experienceSlugs)[number];
 
 export function generateStaticParams() {
   return [...publicSlugs, "login", "signup", "planner", "host-sandbox"].map((slug) => ({ slug }));
@@ -59,7 +55,7 @@ export default async function PublicPage({ params }: { params: Promise<{ locale:
   if (slug === "start-project") return <><Header locale={locale}/><StartProjectPage/><Footer locale={locale}/></>;
   if (slug === "demo") return <><Header locale={locale}/><DemoPage locale={locale}/><Footer locale={locale}/></>;
 
-  if (!publicSlugs.includes(slug as PublicSlug)) notFound();
+  if (!experienceSlugs.includes(slug as ExperienceSlug)) notFound();
 
-  return <div className="public-v6"><div className="pv6-announcement"><span>{es ? "Ahora incorporando propiedades en Middle Tennessee" : "Now onboarding properties in Middle Tennessee"}</span><Link href={`/${locale}/host-sandbox`}>{es ? "Probar demo" : "Try the host demo"} ↗</Link></div><Header locale={locale}/><PublicExperience locale={locale} slug={slug as PublicSlug}/><Footer locale={locale}/></div>;
+  return <div className="public-v6"><div className="pv6-announcement"><span>{es ? "Ahora incorporando propiedades en Middle Tennessee" : "Now onboarding properties in Middle Tennessee"}</span><Link href={`/${locale}/host-sandbox`}>{es ? "Probar demo" : "Try the host demo"} ↗</Link></div><Header locale={locale}/><PublicExperience locale={locale} slug={slug as ExperienceSlug}/><Footer locale={locale}/></div>;
 }
