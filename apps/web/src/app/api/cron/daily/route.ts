@@ -1,0 +1,2 @@
+import {env} from "@/lib/env";import {ok,problem} from "@/lib/http";
+export function GET(request:Request){const ref=crypto.randomUUID();if(!env.CRON_SECRET||request.headers.get("authorization")!==`Bearer ${env.CRON_SECRET}`)return problem("UNAUTHORIZED","Valid cron authorization is required.",401,ref);return ok({completedAt:new Date().toISOString(),status:"no_due_jobs",note:"Daily providers run only for configured active properties; no synthetic work was created."},200,ref)}

@@ -1,0 +1,11 @@
+export type Locale = "en" | "es";
+export type UserRole = "traveler" | "host_owner" | "host_manager" | "property_staff" | "cleaner" | "maintenance_vendor" | "experience_vendor" | "support_agent" | "admin" | "super_admin";
+export type ReservationStatus = "pending" | "confirmed" | "cancelled" | "blocked" | "completed";
+export type ApprovalStatus = "pending" | "approved" | "rejected" | "expired" | "cancelled";
+export type IntegrationState = { configured: boolean; provider: string; message: string; referenceId?: string };
+export type ApiError = { error: { code: string; message: string; referenceId: string; details?: Record<string, string[]> } };
+export type ApiSuccess<T> = { data: T; referenceId: string };
+export type Money = { amount: number; currency: string; estimated?: boolean };
+export type ProviderFact = { provider: string; providerId: string; retrievedAt: string; url?: string };
+export type TripItem = { id: string; title: string; startsAt: string; endsAt?: string; address?: string; estimatedCost: Money; kind: "event" | "place" | "host_recommendation" | "transport"; fact: ProviderFact; notes?: string };
+export type CalendarReservation = { externalId: string; uid: string; summary: string; arrivalDate: string; departureDate: string; status: ReservationStatus; sourceUpdatedAt?: string; rawHash: string };

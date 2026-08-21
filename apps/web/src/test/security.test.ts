@@ -1,0 +1,3 @@
+import {describe,expect,it} from "vitest";import {assertSafeExternalUrl} from "@/lib/security";import {getLocale} from "@/lib/i18n";
+describe("external URL safety",()=>{it("allows a public HTTPS calendar",()=>expect(assertSafeExternalUrl("https://calendar.example.com/feed.ics").hostname).toBe("calendar.example.com"));it.each(["http://calendar.example.com/feed.ics","https://127.0.0.1/feed.ics","https://192.168.1.2/feed.ics","https://service.local/feed.ics"])("blocks unsafe URL %s",url=>expect(()=>assertSafeExternalUrl(url)).toThrow())});
+describe("localization",()=>{it("defaults unknown locales to English",()=>expect(getLocale("fr")).toBe("en"));it("keeps Spanish",()=>expect(getLocale("es")).toBe("es"))});

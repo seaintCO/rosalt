@@ -1,0 +1,1 @@
+export default function Offline(){return <main className="shell page-hero"><p className="eyebrow">VOYNUE</p><h1>You’re offline.</h1><p>Reconnect to load live data. Previously saved essential guidebook and itinerary content remains available where your device has cached it.</p></main>}

@@ -1,0 +1,1 @@
+import Link from "next/link";export default function NotFound(){return <main className="shell page-hero"><p className="eyebrow">404</p><h1>This route doesn’t exist.</h1><Link className="button" href="/en">Return to VOYNUE</Link></main>}

@@ -1,0 +1,5 @@
+import { z } from "zod";
+const optionalUrl=z.string().url().optional().or(z.literal(""));
+const schema=z.object({NEXT_PUBLIC_APP_URL:optionalUrl,NEXT_PUBLIC_SUPABASE_URL:optionalUrl,NEXT_PUBLIC_SUPABASE_ANON_KEY:z.string().optional(),SUPABASE_SERVICE_ROLE_KEY:z.string().optional(),STRIPE_SECRET_KEY:z.string().optional(),STRIPE_WEBHOOK_SECRET:z.string().optional(),NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:z.string().optional(),RESEND_API_KEY:z.string().optional(),OPENAI_API_KEY:z.string().optional(),OPENAI_MODEL:z.string().optional(),TICKETMASTER_API_KEY:z.string().optional(),CRON_SECRET:z.string().optional(),TOKEN_ENCRYPTION_SECRET:z.string().min(32).optional()});
+export const env=schema.parse(process.env);
+export const integrationStatus={supabase:Boolean(env.NEXT_PUBLIC_SUPABASE_URL&&env.NEXT_PUBLIC_SUPABASE_ANON_KEY),stripe:Boolean(env.STRIPE_SECRET_KEY&&env.STRIPE_WEBHOOK_SECRET),openai:Boolean(env.OPENAI_API_KEY),ticketmaster:Boolean(env.TICKETMASTER_API_KEY),resend:Boolean(env.RESEND_API_KEY)} as const;
