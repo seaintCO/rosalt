@@ -576,3 +576,4 @@ export function RosaltHome({ locale }: { locale: string }) {
   );
 }
 
+
