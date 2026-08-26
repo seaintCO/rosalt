@@ -1,2 +1,0 @@
-import {NextResponse} from "next/server";import {createSupabaseServer} from "@/lib/supabase/server";
-export async function GET(request:Request){const url=new URL(request.url),code=url.searchParams.get("code"),next=url.searchParams.get("next")??"/en/dashboard";if(code){const client=await createSupabaseServer();await client?.auth.exchangeCodeForSession(code)}return NextResponse.redirect(new URL(next,url.origin))}

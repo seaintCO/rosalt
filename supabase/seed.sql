@@ -1,1 +1,0 @@
--- Deliberately empty. VOYNUE never seeds fake users, reservations, revenue, or operational data.

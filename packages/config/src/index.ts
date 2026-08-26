@@ -1,1 +1,0 @@
-export const product={name:"VOYNUE",tagline:"Run the property. Personalize the stay.",consumerPromise:"Tell us your budget. We plan the experience.",technology:"Powered by ALMA",company:"A SEAINT company",iosBundleIdentifier:"com.seaint.voynue",androidPackage:"com.seaint.voynue"} as const;

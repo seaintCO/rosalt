@@ -1,2 +1,0 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
-const prefix="voynue:essential:v1:";export async function cacheEssential(userId:string,data:unknown){await AsyncStorage.setItem(prefix+userId,JSON.stringify({storedAt:new Date().toISOString(),data}))}export async function readEssential<T>(userId:string):Promise<T|null>{const raw=await AsyncStorage.getItem(prefix+userId);if(!raw)return null;return (JSON.parse(raw) as {data:T}).data}export async function clearEssential(userId:string){await AsyncStorage.removeItem(prefix+userId)}

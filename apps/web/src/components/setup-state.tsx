@@ -1,1 +1,0 @@
-export function SetupState({title,instructions}:{title:string;instructions:string[]}){return <section className="setup-state" role="status"><span className="status-dot"/><div><strong>{title}</strong><p>This feature is disabled until it is securely configured.</p><ol>{instructions.map(x=><li key={x}>{x}</li>)}</ol></div></section>}
