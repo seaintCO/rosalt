@@ -1,6 +1,5 @@
-"use client";
+﻿"use client";
 
-import Script from "next/script";
 import { useEffect } from "react";
 
 const masterMarkup = `
@@ -366,7 +365,7 @@ const masterMarkup = `
                              </div>
 
                              <div class="bg-zinc-800/90 border-white/5 border rounded-lg pt-3 pr-3 pb-3 pl-3 absolute right-4 bottom-4 left-4 backdrop-blur">
-                                 <p class="text-[10px] text-zinc-400 mb-2 uppercase tracking-wider">Today’s operations</p>
+                                 <p class="text-[10px] text-zinc-400 mb-2 uppercase tracking-wider">Todayâ€™s operations</p>
                                  <div class="flex gap-2">
                                      <button class="flex-1 bg-zinc-700 hover:bg-zinc-600 text-zinc-300 text-[10px] py-1.5 rounded transition-colors">Arrivals</button>
                                      <button class="flex-1 bg-zinc-700 hover:bg-zinc-600 text-zinc-300 text-[10px] py-1.5 rounded transition-colors">Murfreesboro</button>
@@ -478,7 +477,7 @@ const masterMarkup = `
             </div>
         </div>
         <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-zinc-100 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-zinc-400">
-            <span>© 2026 ROSALT Maison Studios. All rights reserved.</span>
+            <span>Â© 2026 ROSALT Maison Studios. All rights reserved.</span>
             <div class="flex gap-4">
                 <a href="#" class="hover:text-zinc-800">Privacy Policy</a>
                 <a href="#" class="hover:text-zinc-800">Terms of Service</a>
@@ -568,8 +567,7 @@ export function RosaltHome({ locale }: { locale: string }) {
 
   return (
     <>
-      <Script src="https://cdn.tailwindcss.com" strategy="afterInteractive" />
-      <style dangerouslySetInnerHTML={{ __html: masterStyles }} />
+            <style dangerouslySetInnerHTML={{ __html: masterStyles }} />
       <div
         className="antialiased selection:bg-emerald-100 selection:text-emerald-900 relative overflow-x-hidden"
         dangerouslySetInnerHTML={{ __html: markup }}
@@ -577,3 +575,4 @@ export function RosaltHome({ locale }: { locale: string }) {
     </>
   );
 }
+
