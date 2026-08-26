@@ -37,7 +37,7 @@ const copy: Record<Locale, Record<PublicSlug, PageCopy>> = {
       index: "01",
       eyebrow: "Travel intelligence",
       title: "A better trip starts with a real number.",
-      lede: "Set the budget, pace, and interests. VOYNUE turns retrieved provider data into a plan you can understand and change.",
+      lede: "Set the budget, pace, and interests. MAISON AI turns retrieved provider data into a plan you can understand and change.",
       primary: "Build my trip",
       primaryHref: "planner",
       secondary: "Explore the system",
@@ -60,7 +60,7 @@ const copy: Record<Locale, Record<PublicSlug, PageCopy>> = {
       features: [
         { label: "OPERATIONS", title: "Today, without the noise.", body: "Arrivals, departures, cleaning, approvals, and maintenance in one view." },
         { label: "GUEST", title: "A private layer for every stay.", body: "Guidebook, itinerary, upgrades, messages, and essential check-in details." },
-        { label: "ALMA", title: "Assistance with boundaries.", body: "Draft, explain, and summarize while humans approve consequential actions." },
+        { label: "MAISON AI", title: "Assistance with boundaries.", body: "Draft, explain, and summarize while humans approve consequential actions." },
       ],
     },
     "for-property-managers": {
@@ -97,7 +97,7 @@ const copy: Record<Locale, Record<PublicSlug, PageCopy>> = {
       index: "05",
       eyebrow: "Independent listing intelligence",
       title: "See the stay before the guest does.",
-      lede: "Upload content you control. VOYNUE evaluates presentation, readiness, operations, and opportunity without scraping or altering the truth of the property.",
+      lede: "Upload content you control. MAISON AI evaluates presentation, readiness, operations, and opportunity without scraping or altering the truth of the property.",
       primary: "Run a quick assessment",
       primaryHref: "airbnb-audit",
       secondary: "Add your property",
@@ -119,7 +119,7 @@ const copy: Record<Locale, Record<PublicSlug, PageCopy>> = {
       secondaryHref: "host-sandbox",
       features: [
         { label: "STARTER · $49", title: "Launch the guest layer.", body: "Portal, guidebook, guest CRM, recommendations, manual reservations, and iCal." },
-        { label: "PRO · $99", title: "Personalize and grow.", body: "Upgrades, purchases, ALMA planning, audit, events, reviews, and bilingual tools." },
+        { label: "PRO · $99", title: "Personalize and grow.", body: "Upgrades, purchases, MAISON AI planning, audit, events, reviews, and bilingual tools." },
         { label: "BUSINESS · $199+", title: "Operate the portfolio.", body: "Teams, cleaning, maintenance, inventory, approvals, and advanced analytics." },
       ],
     },
@@ -127,14 +127,14 @@ const copy: Record<Locale, Record<PublicSlug, PageCopy>> = {
       index: "07",
       eyebrow: "Built around hospitality",
       title: "Technology should make the stay feel more human.",
-      lede: "VOYNUE connects host operations and traveler planning through ALMA—an approval-aware intelligence layer developed by SEAINT.",
+      lede: "MAISON AI connects host operations and traveler planning through MAISON AI—an approval-aware intelligence layer developed by SEAINT.",
       primary: "See how it works",
       primaryHref: "host-sandbox",
       secondary: "Plan a trip",
       secondaryHref: "planner",
       features: [
-        { label: "VOYNUE", title: "The product layer.", body: "Property operations, guest experience, travel planning, and local commerce." },
-        { label: "ALMA", title: "The intelligence layer.", body: "Grounded drafting, analysis, translation, and explanation with traceable inputs." },
+        { label: "MAISON AI", title: "The product layer.", body: "Property operations, guest experience, travel planning, and local commerce." },
+        { label: "MAISON AI", title: "The intelligence layer.", body: "Grounded drafting, analysis, translation, and explanation with traceable inputs." },
         { label: "SEAINT", title: "The company behind it.", body: "A production-minded technology company building useful operating systems." },
       ],
     },
@@ -142,7 +142,7 @@ const copy: Record<Locale, Record<PublicSlug, PageCopy>> = {
       index: "08",
       eyebrow: "Founder launch desk",
       title: "Bring the first property into focus.",
-      lede: "Choose the launch path and VOYNUE will take you to the right next step. Support cases become available after secure account creation.",
+      lede: "Choose the launch path and MAISON AI will take you to the right next step. Support cases become available after secure account creation.",
       primary: "Begin onboarding",
       primaryHref: "signup",
       secondary: "Explore the sandbox",
@@ -157,7 +157,7 @@ const copy: Record<Locale, Record<PublicSlug, PageCopy>> = {
       index: "09",
       eyebrow: "Privacy by design",
       title: "Personalization without careless access.",
-      lede: "VOYNUE scopes records by organization, property, assignment, ownership, or a revocable guest link—and records important access and decisions.",
+      lede: "MAISON AI scopes records by organization, property, assignment, ownership, or a revocable guest link—and records important access and decisions.",
       primary: "Review privacy controls",
       primaryHref: "privacy",
       secondary: "Create an account",
@@ -178,7 +178,7 @@ const copy: Record<Locale, Record<PublicSlug, PageCopy>> = {
       secondary: "Contact the launch desk",
       secondaryHref: "contact",
       features: [
-        { label: "INDEPENDENCE", title: "Not Airbnb.", body: "VOYNUE is independent and is not affiliated with or endorsed by Airbnb." },
+        { label: "INDEPENDENCE", title: "Not Airbnb.", body: "MAISON AI is independent and is not affiliated with or endorsed by Airbnb." },
         { label: "ESTIMATES", title: "No guaranteed outcomes.", body: "Demand, pricing, and revenue opportunities are estimates—not promises." },
         { label: "PAYMENTS", title: "Funds follow configuration.", body: "Vendor distribution is not described as automated until Stripe Connect is approved and live." },
       ],
@@ -222,15 +222,15 @@ copy.es = Object.fromEntries(
 ) as Record<PublicSlug, PageCopy>;
 
 const spanishOverrides: Partial<Record<PublicSlug, Partial<PageCopy>>> = {
-  "for-travelers": { eyebrow: "Inteligencia de viaje", title: "Un mejor viaje comienza con un número real.", lede: "Define el presupuesto, el ritmo y los intereses. VOYNUE convierte datos reales de proveedores en un plan que puedes entender y cambiar.", primary: "Crear mi viaje", secondary: "Explorar el sistema" },
+  "for-travelers": { eyebrow: "Inteligencia de viaje", title: "Un mejor viaje comienza con un número real.", lede: "Define el presupuesto, el ritmo y los intereses. MAISON AI convierte datos reales de proveedores en un plan que puedes entender y cambiar.", primary: "Crear mi viaje", secondary: "Explorar el sistema" },
   "for-hosts": { eyebrow: "El sistema del anfitrión", title: "De la reservación a propiedad lista—un solo espacio.", lede: "Conecta el calendario, coordina la limpieza, publica el portal y mantén las acciones importantes bajo aprobación.", primary: "Probar demo anfitrión", secondary: "Agregar propiedad real" },
   "for-property-managers": { eyebrow: "Operaciones de portafolio", title: "Cada propiedad. La persona correcta. El contexto correcto.", lede: "Membresías, asignaciones, límites de aprobación y flujos auditables que escalan desde una casa hasta un portafolio.", primary: "Modelar mi portafolio", secondary: "Comenzar configuración" },
   "local-experiences": { eyebrow: "Descubrimiento local", title: "El destino, conectado con intención.", lede: "Descubre eventos con fuente, recomendaciones del anfitrión y servicios locales aprobados, con patrocinios claramente identificados.", primary: "Planear por destino", secondary: "Ser socio local" },
-  "airbnb-audit": { eyebrow: "Inteligencia independiente", title: "Mira la estancia antes que el huésped.", lede: "Sube contenido que controlas. VOYNUE evalúa presentación, preparación y operación sin scraping ni alterar la realidad.", primary: "Evaluación rápida", secondary: "Agregar propiedad" },
+  "airbnb-audit": { eyebrow: "Inteligencia independiente", title: "Mira la estancia antes que el huésped.", lede: "Sube contenido que controlas. MAISON AI evalúa presentación, preparación y operación sin scraping ni alterar la realidad.", primary: "Evaluación rápida", secondary: "Agregar propiedad" },
   pricing: { eyebrow: "Rutas claras para lanzar", title: "Comienza con la estancia. Agrega operaciones cuando estés listo.", lede: "El planificador es gratis. Los planes para anfitriones escalan por propiedad y los permisos se aplican en el servidor.", primary: "Elegir plan", secondary: "Probar demo" },
-  about: { eyebrow: "Creado alrededor de la hospitalidad", title: "La tecnología debe hacer la estancia más humana.", lede: "VOYNUE conecta operaciones y planificación mediante ALMA—una capa de inteligencia con aprobaciones desarrollada por SEAINT.", primary: "Ver cómo funciona", secondary: "Planear un viaje" },
-  contact: { eyebrow: "Mesa de lanzamiento", title: "Pon la primera propiedad en foco.", lede: "Elige tu ruta y VOYNUE te lleva al siguiente paso correcto. El soporte seguro se activa al crear tu cuenta.", primary: "Comenzar", secondary: "Explorar demo" },
-  privacy: { eyebrow: "Privacidad por diseño", title: "Personalización sin acceso descuidado.", lede: "VOYNUE limita los registros por organización, propiedad, asignación, dueño o enlace revocable del huésped.", primary: "Ver controles", secondary: "Crear cuenta" },
+  about: { eyebrow: "Creado alrededor de la hospitalidad", title: "La tecnología debe hacer la estancia más humana.", lede: "MAISON AI conecta operaciones y planificación mediante MAISON AI—una capa de inteligencia con aprobaciones desarrollada por SEAINT.", primary: "Ver cómo funciona", secondary: "Planear un viaje" },
+  contact: { eyebrow: "Mesa de lanzamiento", title: "Pon la primera propiedad en foco.", lede: "Elige tu ruta y MAISON AI te lleva al siguiente paso correcto. El soporte seguro se activa al crear tu cuenta.", primary: "Comenzar", secondary: "Explorar demo" },
+  privacy: { eyebrow: "Privacidad por diseño", title: "Personalización sin acceso descuidado.", lede: "MAISON AI limita los registros por organización, propiedad, asignación, dueño o enlace revocable del huésped.", primary: "Ver controles", secondary: "Crear cuenta" },
   terms: { eyebrow: "Límites claros", title: "Software para la estancia—no un reemplazo de responsabilidad.", lede: "Los anfitriones son responsables de la propiedad, seguridad, permisos, compromisos, proveedores, reembolsos y reglas externas.", primary: "Ver límites", secondary: "Contactar" },
   accessibility: { eyebrow: "El acceso es hospitalidad", title: "Diseñado para ser claro, tranquilo y usable.", lede: "Navegación por teclado, foco visible, estructura semántica, contraste, movimiento reducido e información veraz.", primary: "Explorar accesibilidad", secondary: "Planear viaje" },
   "vendor-application": { eyebrow: "Red de socios locales", title: "Forma parte de una estancia memorable.", lede: "Los negocios pueden preparar servicio, precios, área, disponibilidad, cumplimiento y documentos antes de revisión.", primary: "Preparar solicitud", secondary: "Ver experiencias" },
@@ -249,7 +249,7 @@ const spanishFeatures: Record<PublicSlug, PageCopy["features"]> = {
   "for-hosts": [
     { label: "OPERACIONES", title: "Hoy, sin ruido.", body: "Llegadas, salidas, limpieza, aprobaciones y mantenimiento en una vista." },
     { label: "HUÉSPED", title: "Una capa privada por estancia.", body: "Guía, itinerario, mejoras, mensajes y detalles esenciales." },
-    { label: "ALMA", title: "Asistencia con límites.", body: "Prepara, explica y resume mientras humanos aprueban acciones importantes." },
+    { label: "MAISON AI", title: "Asistencia con límites.", body: "Prepara, explica y resume mientras humanos aprueban acciones importantes." },
   ],
   "for-property-managers": [
     { label: "ACCESO", title: "Los roles se aplican en la base de datos.", body: "Cada persona ve únicamente registros autorizados." },
@@ -258,7 +258,7 @@ const spanishFeatures: Record<PublicSlug, PageCopy["features"]> = {
   ],
   "local-experiences": [
     { label: "EVENTOS", title: "Eventos reales, fuentes directas.", body: "Los resultados conservan estado, lugar, zona horaria y enlace." },
-    { label: "LOCAL", title: "La recomendación tiene etiqueta.", body: "Se distingue consejo del anfitrión, dato del proveedor y sugerencia de ALMA." },
+    { label: "LOCAL", title: "La recomendación tiene etiqueta.", body: "Se distingue consejo del anfitrión, dato del proveedor y sugerencia de MAISON AI." },
     { label: "COMERCIO", title: "Mejoras con términos claros.", body: "Precio, anticipación, cumplimiento, reembolso y aprobación visibles." },
   ],
   "airbnb-audit": [
@@ -268,12 +268,12 @@ const spanishFeatures: Record<PublicSlug, PageCopy["features"]> = {
   ],
   pricing: [
     { label: "STARTER · $49", title: "Lanza la experiencia del huésped.", body: "Portal, guía, CRM, recomendaciones, reservaciones manuales e iCal." },
-    { label: "PRO · $99", title: "Personaliza y crece.", body: "Mejoras, compras, ALMA, auditoría, eventos y herramientas bilingües." },
+    { label: "PRO · $99", title: "Personaliza y crece.", body: "Mejoras, compras, MAISON AI, auditoría, eventos y herramientas bilingües." },
     { label: "BUSINESS · $199+", title: "Opera el portafolio.", body: "Equipos, limpieza, mantenimiento, inventario, aprobaciones y analíticas." },
   ],
   about: [
-    { label: "VOYNUE", title: "La capa del producto.", body: "Operaciones, experiencia del huésped, viajes y comercio local." },
-    { label: "ALMA", title: "La capa de inteligencia.", body: "Análisis, redacción, traducción y explicación con fuentes rastreables." },
+    { label: "MAISON AI", title: "La capa del producto.", body: "Operaciones, experiencia del huésped, viajes y comercio local." },
+    { label: "MAISON AI", title: "La capa de inteligencia.", body: "Análisis, redacción, traducción y explicación con fuentes rastreables." },
     { label: "SEAINT", title: "La empresa que lo desarrolla.", body: "Una compañía tecnológica enfocada en sistemas operativos útiles." },
   ],
   contact: [
@@ -287,7 +287,7 @@ const spanishFeatures: Record<PublicSlug, PageCopy["features"]> = {
     { label: "ACCESO", title: "Privado por defecto.", body: "RLS, archivos privados, URLs firmadas, enlaces expirable y auditoría." },
   ],
   terms: [
-    { label: "INDEPENDENCIA", title: "No somos Airbnb.", body: "VOYNUE es independiente y no está afiliado ni respaldado por Airbnb." },
+    { label: "INDEPENDENCIA", title: "No somos Airbnb.", body: "MAISON AI es independiente y no está afiliado ni respaldado por Airbnb." },
     { label: "ESTIMADOS", title: "Sin resultados garantizados.", body: "Demanda, precios e ingresos potenciales son estimaciones." },
     { label: "PAGOS", title: "Los fondos siguen la configuración.", body: "La distribución no se declara automática hasta activar Stripe Connect." },
   ],
@@ -358,7 +358,7 @@ function InteractiveStage({ slug, locale }: { slug: PublicSlug; locale: Locale }
 
   if (slug === "about") return <div className="pv6-stack-stage">
     <Hologram size="compact" label="A"/>
-    <div>{[{ name: "VOYNUE", line: "Experience + operations" }, { name: "ALMA", line: "Grounded intelligence" }, { name: "SEAINT", line: "Company + engineering" }].map((layer, index) => <button onClick={() => setActive(index)} className={active === index ? "active" : ""} key={layer.name}><small>0{index + 1}</small><span><b>{layer.name}</b><em>{layer.line}</em></span></button>)}</div>
+    <div>{[{ name: "MAISON AI", line: "Experience + operations" }, { name: "MAISON AI", line: "Grounded intelligence" }, { name: "SEAINT", line: "Company + engineering" }].map((layer, index) => <button onClick={() => setActive(index)} className={active === index ? "active" : ""} key={layer.name}><small>0{index + 1}</small><span><b>{layer.name}</b><em>{layer.line}</em></span></button>)}</div>
   </div>;
 
   if (slug === "contact") return <div className="pv6-contact-stage">
@@ -374,7 +374,7 @@ function InteractiveStage({ slug, locale }: { slug: PublicSlug; locale: Locale }
   </div>;
 
   const sections = legalSections[slug as keyof typeof legalSections] ?? ["Independent platform", "Real data", "Approvals", "Security architecture"];
-  return <div className="pv6-policy-stage"><header><span>{es ? "EXPLORADOR DE POLÍTICA" : "POLICY EXPLORER"}</span><b>{sections[active]}</b></header><div>{sections.map((item, index) => <button onClick={() => setActive(index)} className={active === index ? "active" : ""} key={item}><i>0{index + 1}</i><span>{item}</span><em>→</em></button>)}</div><article><b>{sections[active]}</b><p>{es ? "Este principio está reflejado en los controles de acceso, flujos y documentación de VOYNUE. Los documentos legales finales deben revisarse antes del lanzamiento público." : "This principle is reflected in VOYNUE access controls, workflows, and documentation. Final legal documents require review before public launch."}</p></article></div>;
+  return <div className="pv6-policy-stage"><header><span>{es ? "EXPLORADOR DE POLÍTICA" : "POLICY EXPLORER"}</span><b>{sections[active]}</b></header><div>{sections.map((item, index) => <button onClick={() => setActive(index)} className={active === index ? "active" : ""} key={item}><i>0{index + 1}</i><span>{item}</span><em>→</em></button>)}</div><article><b>{sections[active]}</b><p>{es ? "Este principio está reflejado en los controles de acceso, flujos y documentación de MAISON AI. Los documentos legales finales deben revisarse antes del lanzamiento público." : "This principle is reflected in MAISON AI access controls, workflows, and documentation. Final legal documents require review before public launch."}</p></article></div>;
 }
 
 export function PublicExperience({ locale, slug }: { locale: Locale; slug: PublicSlug }) {
@@ -388,7 +388,7 @@ export function PublicExperience({ locale, slug }: { locale: Locale; slug: Publi
         <span>{page.lede}</span>
         <div><Link className="pv6-primary" href={`/${locale}/${page.primaryHref}`}>{page.primary}<b>→</b></Link><Link className="pv6-secondary" href={`/${locale}/${page.secondaryHref}`}>{page.secondary} ↗</Link></div>
       </div>
-      <div className="pv6-stage-shell"><div className="pv6-stage-top"><span><i/><i/><i/></span><b>VOYNUE / {page.eyebrow}</b><em>{es ? "INTERACTIVO" : "INTERACTIVE"}</em></div><InteractiveStage slug={slug} locale={locale}/></div>
+      <div className="pv6-stage-shell"><div className="pv6-stage-top"><span><i/><i/><i/></span><b>MAISON AI / {page.eyebrow}</b><em>{es ? "INTERACTIVO" : "INTERACTIVE"}</em></div><InteractiveStage slug={slug} locale={locale}/></div>
     </section>
 
     <section className="pv6-proof"><span>{es ? "Diseñado para operar" : "Designed to operate"}</span><div><b>{es ? "Datos reales" : "Real data"}</b><i/><b>{es ? "Aprobaciones" : "Approvals"}</b><i/><b>English + Español</b><i/><b>{es ? "Acceso seguro" : "Secure access"}</b></div></section>
@@ -398,6 +398,6 @@ export function PublicExperience({ locale, slug }: { locale: Locale; slug: Publi
       <div>{page.features.map((feature, index) => <article key={feature.title}><span>{feature.label}</span><i>0{index + 1}</i><h3>{feature.title}</h3><p>{feature.body}</p></article>)}</div>
     </section>
 
-    <section className="pv6-final"><div className="pv6-final-glow"/><p>VOYNUE · POWERED BY ALMA</p><h2>{es ? "La estancia merece un mejor sistema." : "The stay deserves a better system."}</h2><div><Link href={`/${locale}/host-sandbox`}>{es ? "Probar demo anfitrión" : "Try the host sandbox"}<span>→</span></Link><Link href={`/${locale}/planner`}>{es ? "Planear un viaje" : "Plan a trip"} ↗</Link></div></section>
+    <section className="pv6-final"><div className="pv6-final-glow"/><p>MAISON AI · POWERED BY MAISON AI</p><h2>{es ? "La estancia merece un mejor sistema." : "The stay deserves a better system."}</h2><div><Link href={`/${locale}/host-sandbox`}>{es ? "Probar demo anfitrión" : "Try the host sandbox"}<span>→</span></Link><Link href={`/${locale}/planner`}>{es ? "Planear un viaje" : "Plan a trip"} ↗</Link></div></section>
   </main>;
 }

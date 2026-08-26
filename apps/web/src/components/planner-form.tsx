@@ -81,7 +81,7 @@ export function PlannerForm({locale}:{locale:string}){
   return <section className="planner-studio">
     <div className="planner-studio-top">
       <div><span className="planner-live-dot"/><b>{es?"PLANIFICADOR GRATUITO":"FREE TRIP PLANNER"}</b></div>
-      <span>{es?"Impulsado por ALMA · Datos de proveedores reales":"Powered by ALMA · Real provider data"}</span>
+      <span>{es?"Impulsado por MAISON AI · Datos de proveedores reales":"Powered by MAISON AI · Real provider data"}</span>
     </div>
 
     <div className="planner-progress" aria-label={`${progress}% complete`}><i style={{width:`${progress}%`}}/></div>
@@ -113,7 +113,7 @@ export function PlannerForm({locale}:{locale:string}){
         </div>}
 
         {step===4&&<div className="planner-step-panel review-panel">
-          <header><span>04</span><div><h2>{result?(es?"Tu viaje, basado en hechos.":"Your trip, grounded in facts."):(es?"Listo para construir.":"Ready to build.")}</h2><p>{result?(es?"Los enlaces y eventos vienen de proveedores configurados.":"Links and events come from configured providers."):(es?"Revisa la información antes de pedirle el itinerario a ALMA.":"Review the details before asking ALMA for the itinerary.")}</p></div></header>
+          <header><span>04</span><div><h2>{result?(es?"Tu viaje, basado en hechos.":"Your trip, grounded in facts."):(es?"Listo para construir.":"Ready to build.")}</h2><p>{result?(es?"Los enlaces y eventos vienen de proveedores configurados.":"Links and events come from configured providers."):(es?"Revisa la información antes de pedirle el itinerario a MAISON AI.":"Review the details before asking MAISON AI for the itinerary.")}</p></div></header>
           {!result&&<div className="review-grid"><article><span>{es?"VIAJE":"TRIP"}</span><strong>{destination||"—"}</strong><small>{startDate&&endDate?`${startDate} → ${endDate}`:(es?"Agrega fechas":"Add dates")}</small></article><article><span>{es?"GRUPO":"GROUP"}</span><strong>{travelers}</strong><small>{es?"viajeros":"travelers"}</small></article><article><span>{es?"PRESUPUESTO":"BUDGET"}</span><strong>{money(budget)}</strong><small>{money(activityBudget)} {es?"para actividades":"for activities"}</small></article><article><span>{es?"ESTILO":"STYLE"}</span><strong>{style}</strong><small>{interests.length} {es?"intereses":"interests"}</small></article></div>}
           {result&&<div className="grounded-results"><div className="result-summary"><span>{es?"PRESUPUESTO RESTANTE":"REMAINING ACTIVITY BUDGET"}</span><strong>{money(result.remainingBudget)}</strong><small>{es?"Calculado de precios mínimos disponibles; algunos precios no están disponibles.":"Calculated from available minimum prices; some prices may be unavailable."}</small></div>{result.warnings.map(warning=><p className="result-warning" key={warning}>ⓘ {warning}</p>)}{result.itinerary?.days?.map(day=><section className="itinerary-day" key={day.date}><header><span>{new Date(`${day.date}T12:00:00`).toLocaleDateString(locale,{weekday:"short",month:"short",day:"numeric"})}</span><h3>{day.title}</h3></header>{day.items.map((item,index)=>{const event=result.events.find(candidate=>candidate.providerId===item.providerId);return <article key={`${item.providerId}-${index}`}><time>{item.startTime}</time><div><b>{item.title}</b><p>{item.reason}</p><small>{item.estimatedCost==null?(es?"Precio no disponible":"Price unavailable"):`${es?"Costo estimado":"Estimated cost"}: ${money(item.estimatedCost)}`}</small></div>{event&&<a href={event.ticketUrl} target="_blank" rel="noreferrer sponsored">{es?"Proveedor":"Provider"} ↗</a>}</article>})}</section>)}</div>}
         </div>}
@@ -128,7 +128,7 @@ export function PlannerForm({locale}:{locale:string}){
         <div className="budget-breakdown"><div><i className="blue"/><span>{es?"Actividades y eventos":"Activities & events"}</span><b>{money(activityBudget)}</b></div><div><i/><span>{es?"Resto del viaje":"Remaining trip budget"}</span><b>{money(remaining)}</b></div></div>
         <div className="budget-bars"><span>{es?"PRESUPUESTO POR PERSONA":"BUDGET PER TRAVELER"}</span><strong>{money(Math.round(budget/Math.max(travelers,1)))}</strong><i><b style={{width:`${Math.min(100,budget/100)}%`}}/></i></div>
         <div className="trip-signal"><span>{es?"SEÑAL DEL VIAJE":"TRIP SIGNAL"}</span><div>{[18,32,24,48,61,53,78,70,87,92].map((height,index)=><i key={index} style={{height:`${height}%`}}/>)}</div><small>{dateReady&&interests.length?es?"Listo para recuperar datos reales":"Ready to retrieve real data":es?"Completa el viaje y los intereses":"Complete trip details and interests"}</small></div>
-        <div className="grounding-note"><i>⌁</i><p><b>{es?"Sin datos inventados":"No fabricated data"}</b><span>{es?"Si un proveedor no confirma un dato, VOYNUE lo marca como no disponible.":"If a provider does not confirm a fact, VOYNUE marks it unavailable."}</span></p></div>
+        <div className="grounding-note"><i>⌁</i><p><b>{es?"Sin datos inventados":"No fabricated data"}</b><span>{es?"Si un proveedor no confirma un dato, MAISON AI lo marca como no disponible.":"If a provider does not confirm a fact, MAISON AI marks it unavailable."}</span></p></div>
       </aside>
     </div>
   </section>;
