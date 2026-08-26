@@ -1,46 +1,64 @@
-# ROSALT Maison Studios — Luxury Website + Maison AI Front-End Demo
+# VOYNUE
 
-This package translates the provided reference HTML into the ROSALT Maison Studios brand while preserving its core layout rhythm, Inter typography, large photography, rounded navigation, editorial spacing, card proportions, and scroll-reveal behavior.
+**Run the property. Personalize the stay.**  
+Powered by ALMA · A SEAINT company
 
-## Brand hierarchy
-- Public brand: **ROSALT Maison Studios**
-- Positioning: **Designing homes, stays, and spaces that sell.**
-- Supporting software: **Maison AI**
-- Maison AI is positioned as the private project/operations portal behind ROSALT, not the public-facing brand.
+VOYNUE is a production foundation for short-term-rental operations and grounded travel planning. It contains a Next.js PWA, an Expo mobile application, shared TypeScript packages, Supabase/PostgreSQL migrations with forced RLS, a real tenant-scoped Guest CRM, Stripe billing and upgrade checkout, iCal reservation synchronization, secure guest portals and client rooms, unified communications, Ticketmaster discovery, and ALMA structured planning.
 
-## Included pages
-- index.html — Home
-- services.html — Services
-- property-management.html — Property Management
-- maison-ai.html — Maison AI
-- packages.html — Packages / Pricing
-- portfolio.html — Portfolio / Before & After
-- about.html — About ROSALT
-- start-project.html — Lead / onboarding form demo
-- client-login.html — Client login UI demo
-- dashboard.html — ROSALT internal dashboard demo
-- owner-portal.html — Owner portal demo
-- vendor-tasks.html — Cleaner/vendor task demo
-- guest-portal.html — Later-phase guest portal concept
+VOYNUE deliberately ships with no fake users, reservations, revenue, events, reviews, or AI responses. Unconfigured integrations return `SETUP_REQUIRED` and the UI explains the exact missing configuration.
 
-## Run in VS Code
-Because this is static HTML/CSS/JS, you can open `index.html` directly or use the VS Code Live Server extension.
+## Repository
 
-## Important launch notes
-- The project form currently stores a demo payload in localStorage only. Connect it to your backend/form endpoint before launch.
-- Login/authentication is not implemented.
-- Dashboard, owner portal, and vendor task data are static demo content.
-- PMS/channel-manager syncing is not implemented in this front-end package.
-- Airbnb/Vrbo/Booking.com should initially connect to an established PMS/channel manager, with that system serving as the calendar master.
-- AI is not required for the core platform. Add AI only after the operational workflows and integrations are stable.
-- The site uses the same Inter web font family as the supplied reference HTML.
-- ROSALT logo artwork included in `/assets` is PNG only.
-- Editorial property photography uses remote Unsplash URLs so the visual treatment remains close to the supplied design reference. Replace with owned ROSALT project photography before production.
+```text
+apps/web          Next.js App Router, public site, PWA, APIs, host dashboard, guest portal
+apps/mobile       Expo React Native app for host, cleaner, vendor, and traveler roles
+packages/domain   Calendar, money, token, and other framework-independent logic
+packages/types    Shared contracts
+packages/validation Shared Zod request schemas
+packages/api-client Typed HTTP client
+packages/ui       Shared design tokens
+packages/config   Product and app identifiers
+supabase          PostgreSQL schema, RLS, storage buckets, secure functions, pgTAP tests
+docs              Architecture, integrations, deployment, security, mobile, and launch guides
+```
 
-## Design direction applied
-- Warm cream / white / charcoal / deep green
-- No decorative gradients or holographic UI
-- No fake market charts or tech-first messaging
-- Large editorial property photography
-- Luxury hospitality language first
-- Maison AI positioned behind the studio experience
+## Start locally
+
+1. Install Node.js 22 or newer and the Supabase CLI.
+2. Copy `.env.example` to `.env.local` and fill only the providers you intend to test.
+3. Run `npm install`.
+4. Run `supabase start`, then `supabase db reset`.
+5. Run `npm run dev` and open `http://localhost:3000`.
+
+The web app remains buildable without credentials. Provider-backed workflows remain disabled and show setup instructions until their keys exist. The public host sandbox at `/en/host-sandbox` and `/es/host-sandbox` is an isolated, browser-tab-only product walkthrough: users enter their own practice property and stay details, nothing is persisted, and no provider calls or production records are created.
+
+After Supabase is connected and all migrations are applied, the live Guest CRM is available at `/en/dashboard/guests` and `/es/dashboard/guests`. It reads only organization-scoped records and supports guest creation, search, lifecycle stages, tags, internal notes, contact logging, stay history, and recorded value.
+
+## Verification
+
+```bash
+npm run typecheck
+npm run lint
+npm run test
+npm run build
+```
+
+For database verification, run `supabase test db`. External live-flow verification requires the credentials and test accounts documented in [Production deployment](docs/DEPLOYMENT.md).
+
+## Important independence statement
+
+VOYNUE is an independent software platform and is not affiliated with or endorsed by Airbnb. It does not scrape Airbnb, request Airbnb credentials, or claim direct Airbnb messaging. Initial Airbnb synchronization uses the calendar export URL supplied by the host.
+
+## Guides
+
+- [Architecture](docs/ARCHITECTURE.md)
+- [Local development](docs/LOCAL_DEVELOPMENT.md)
+- [Supabase and RLS](docs/SUPABASE.md)
+- [Integrations](docs/INTEGRATIONS.md)
+- [Unified communications](docs/UNIFIED_COMMUNICATIONS.md)
+- [Production deployment](docs/DEPLOYMENT.md)
+- [Mobile and App Store preparation](docs/MOBILE.md)
+- [Security architecture](docs/SECURITY.md)
+- [Troubleshooting](docs/TROUBLESHOOTING.md)
+- [Launch checklist](docs/LAUNCH_CHECKLIST.md)
+- [Truthful launch report](docs/LAUNCH_REPORT.md)

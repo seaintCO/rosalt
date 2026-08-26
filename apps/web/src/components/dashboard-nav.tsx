@@ -1,0 +1,4 @@
+import Link from "next/link";import {Brand} from "./brand";
+const items=["Overview","Stays / Reservations","Properties","Guest & Client CRM","Messages","Readiness Workflow","Maintenance","Inventory","Guest Experience Upgrades","Approvals","Analytics","Property Audit","Integrations"];
+const routes:Record<string,string>={"Stays / Reservations":"calendar","Guest & Client CRM":"guests","Readiness Workflow":"cleaning","Guest Experience Upgrades":"upgrades","Property Audit":"listing-audit"};
+export function DashboardNav({locale}:{locale:string}){return <aside className="sidebar"><Brand locale={locale}/><nav>{items.map(item=>{const slug=routes[item]??item.toLowerCase().replaceAll(" ","-");return <Link key={item} href={item==="Overview"?`/${locale}/dashboard`:`/${locale}/dashboard/${slug}`}>{item}</Link>})}</nav><Link href={`/${locale}/dashboard/launch`}>Maison AI launch checklist →</Link></aside>}

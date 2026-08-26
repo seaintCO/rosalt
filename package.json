@@ -1,0 +1,33 @@
+{
+  "name": "voynue",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@11.9.0",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "npm run dev --workspace=@voynue/web",
+    "dev:web": "npm run dev --workspace=@voynue/web",
+    "dev:mobile": "npm run dev --workspace=@voynue/mobile",
+    "dev:all": "turbo dev",
+    "build": "turbo build",
+    "typecheck": "turbo typecheck",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "turbo": "^2.10.8",
+    "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "8.5.25",
+      "sharp": "0.35.3"
+    },
+    "xcode": {
+      "uuid": "11.1.1"
+    }
+  },
+  "engines": { "node": ">=22" }
+}
